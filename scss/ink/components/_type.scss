@@ -1,0 +1,93 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+
+@include exports("type") {
+
+  /* Typography */
+
+  body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+    color: #222222;
+    font-family: "Helvetica", "Arial", sans-serif; 
+    font-weight: normal; 
+    padding:0; 
+    margin: 0;
+    text-align: left; 
+    line-height: 1.3;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    word-break: normal;
+  }
+
+  h1 {font-size: 40px;}
+  h2 {font-size: 36px;}
+  h3 {font-size: 32px;}
+  h4 {font-size: 28px;}
+  h5 {font-size: 24px;}
+  h6 {font-size: 20px;}
+  body, table.body, p, td {font-size: 14px;line-height:19px;}
+
+  p.lead, p.lede, p.leed {
+    font-size: 18px;
+    line-height:21px;
+  }
+
+  p { 
+    margin-bottom: 10px;
+  }
+
+  small {
+    font-size: 10px;
+  }
+
+  a {
+    color: #2ba6cb; 
+    text-decoration: none;
+  }
+
+  a:hover { 
+    color: #2795b6 !important;
+  }
+
+  a:active { 
+    color: #2795b6 !important;
+  }
+
+  a:visited { 
+    color: #2ba6cb !important;
+  }
+
+  h1 a, 
+  h2 a, 
+  h3 a, 
+  h4 a, 
+  h5 a, 
+  h6 a {
+    color: #2ba6cb;
+  }
+
+  h1 a:active, 
+  h2 a:active,  
+  h3 a:active, 
+  h4 a:active, 
+  h5 a:active, 
+  h6 a:active { 
+    color: #2ba6cb !important; 
+  } 
+
+  h1 a:visited, 
+  h2 a:visited,  
+  h3 a:visited, 
+  h4 a:visited, 
+  h5 a:visited, 
+  h6 a:visited { 
+    color: #2ba6cb !important; 
+  } 
+ } 

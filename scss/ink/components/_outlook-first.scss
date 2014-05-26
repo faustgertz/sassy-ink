@@ -1,0 +1,17 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+
+@include exports("outlook-first") {
+	/* Outlook First */
+
+	body.outlook p {
+	  display: inline !important;
+	}
+}

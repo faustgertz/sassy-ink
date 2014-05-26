@@ -1,0 +1,31 @@
+// Ink by ZURB
+// zurb.com/ink/
+// Licensed under MIT Open Source
+
+@import "global";
+
+//
+// @variables
+//
+$container-width: 580px !default;
+$column-gutter: 20px !default;
+
+@include exports("block-grid") {
+  /* Block Grid */
+
+  .block-grid {
+    width: 100%;
+    max-width: $container-width;
+  }
+
+  .block-grid td {
+    display: inline-block;
+    padding:$column-gutter / 2;
+  }
+
+  @for $i from 2 through 8 {
+    .#{number2word($i)}-up td {
+      width: floor(($container-width - $i * $column-gutter) / $i);
+    }
+  }
+}
