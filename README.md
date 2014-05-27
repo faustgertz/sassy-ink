@@ -37,91 +37,90 @@ Ink was made by [ZURB](http://www.zurb.com), a product design company in Campbel
 Diff
 ====
 diff -w ink-original.css ink.css
-``
-288c287
-<   width: 8.333333%;
----
->   width: 8.33333%;
-293c292
-<   width: 16.666666%;
----
->   width: 16.66667%;
-303c302
-<   width: 33.333333%;
----
->   width: 33.33333%;
-308c307
-<   width: 41.666666%;
----
->   width: 41.66667%;
-318c317
-<   width: 58.333333%;
----
->   width: 58.33333%;
-323c322
-<   width: 66.666666%;
----
->   width: 66.66667%;
-333c332
-<   width: 83.333333%;
----
->   width: 83.33333%;
-338c337
-<   width: 91.666666%;
----
->   width: 91.66667%;
-622c621
-<   color: #ffffff;
----
->   color: white;
-650c649
-<   color: #ffffff;
----
->   color: white;
-815c814
-<     width: 8.333333% !important;
----
->     width: 8.33333% !important;
-820c819
-<     width: 16.666666% !important;
----
->     width: 16.66667% !important;
-830c829
-<     width: 33.333333% !important;
----
->     width: 33.33333% !important;
-835c834
-<     width: 41.666666% !important;
----
->     width: 41.66667% !important;
-845c844
-<     width: 58.333333% !important;
----
->     width: 58.33333% !important;
-850c849
-<     width: 66.666666% !important;
----
->     width: 66.66667% !important;
-860c859
-<     width: 83.333333% !important;
----
->     width: 83.33333% !important;
-865c864
-<     width: 91.666666% !important;
----
->     width: 91.66667% !important;
-873,883c872
-<   table[class="body"] td.offset-by-one,
-<   table[class="body"] td.offset-by-two,
-<   table[class="body"] td.offset-by-three,
-<   table[class="body"] td.offset-by-four,
-<   table[class="body"] td.offset-by-five,
-<   table[class="body"] td.offset-by-six,
-<   table[class="body"] td.offset-by-seven,
-<   table[class="body"] td.offset-by-eight,
-<   table[class="body"] td.offset-by-nine,
-<   table[class="body"] td.offset-by-ten,
-<   table[class="body"] td.offset-by-eleven {
----
->   table[class="body"] td.offset-by-one, table[class="body"] td.offset-by-two, table[class="body"] td.offset-by-three, table[class="body"] td.offset-by-four, table[class="body"] td.offset-by-five, table[class="body"] td.offset-by-six, table[class="body"] td.offset-by-seven, table[class="body"] td.offset-by-eight, table[class="body"] td.offset-by-nine, table[class="body"] td.offset-by-ten, table[class="body"] td.offset-by-eleven {
-``
+
+	288c287
+	<   width: 8.333333%;
+	---
+	>   width: 8.33333%;
+	293c292
+	<   width: 16.666666%;
+	---
+	>   width: 16.66667%;
+	303c302
+	<   width: 33.333333%;
+	---
+	>   width: 33.33333%;
+	308c307
+	<   width: 41.666666%;
+	---
+	>   width: 41.66667%;
+	318c317
+	<   width: 58.333333%;
+	---
+	>   width: 58.33333%;
+	323c322
+	<   width: 66.666666%;
+	---
+	>   width: 66.66667%;
+	333c332
+	<   width: 83.333333%;
+	---
+	>   width: 83.33333%;
+	338c337
+	<   width: 91.666666%;
+	---
+	>   width: 91.66667%;
+	622c621
+	<   color: #ffffff;
+	---
+	>   color: white;
+	650c649
+	<   color: #ffffff;
+	---
+	>   color: white;
+	815c814
+	<     width: 8.333333% !important;
+	---
+	>     width: 8.33333% !important;
+	820c819
+	<     width: 16.666666% !important;
+	---
+	>     width: 16.66667% !important;
+	830c829
+	<     width: 33.333333% !important;
+	---
+	>     width: 33.33333% !important;
+	835c834
+	<     width: 41.666666% !important;
+	---
+	>     width: 41.66667% !important;
+	845c844
+	<     width: 58.333333% !important;
+	---
+	>     width: 58.33333% !important;
+	850c849
+	<     width: 66.666666% !important;
+	---
+	>     width: 66.66667% !important;
+	860c859
+	<     width: 83.333333% !important;
+	---
+	>     width: 83.33333% !important;
+	865c864
+	<     width: 91.666666% !important;
+	---
+	>     width: 91.66667% !important;
+	873,883c872
+	<   table[class="body"] td.offset-by-one,
+	<   table[class="body"] td.offset-by-two,
+	<   table[class="body"] td.offset-by-three,
+	<   table[class="body"] td.offset-by-four,
+	<   table[class="body"] td.offset-by-five,
+	<   table[class="body"] td.offset-by-six,
+	<   table[class="body"] td.offset-by-seven,
+	<   table[class="body"] td.offset-by-eight,
+	<   table[class="body"] td.offset-by-nine,
+	<   table[class="body"] td.offset-by-ten,
+	<   table[class="body"] td.offset-by-eleven {
+	---
+	>   table[class="body"] td.offset-by-one, table[class="body"] td.offset-by-two, table[class="body"] td.offset-by-three, table[class="body"] td.offset-by-four, table[class="body"] td.offset-by-five, table[class="body"] td.offset-by-six, table[class="body"] td.offset-by-seven, table[class="body"] td.offset-by-eight, table[class="body"] td.offset-by-nine, table[class="body"] td.offset-by-ten, table[class="body"] td.offset-by-eleven {
