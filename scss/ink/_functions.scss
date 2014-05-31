@@ -12,6 +12,23 @@ $modules: () !default;
   }
 }
 
+// RANGES
+// We use these functions to define ranges for various things, like media queries. 
+@function lower-bound($range){
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range,1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}
+
+// Borrowed from René Meye's [pull request #61](https://github.com/zurb/ink/pull/61). 
 @function number2word($n) {
   @if $n == 1 {
    @return one;

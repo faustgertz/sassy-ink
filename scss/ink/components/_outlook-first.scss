@@ -7,11 +7,14 @@
 //
 // @variables
 //
+$include-html-outlook-first-classes: $include-html-classes !default;
 
 @include exports("outlook-first") {
-	/* Outlook First */
+	@if $include-html-outlook-first-classes {
+		/* Outlook First */
 
-	body.outlook p {
-	  display: inline !important;
+		body.outlook p {
+		  display: inline !important;
+		}
 	}
 }

@@ -3,14 +3,16 @@ Sassy Ink
 
 A quick and dirty attempt to make a Sass version of [Ink](http://zurb.com/ink). 
 
-Only container width, number of columns, and gutter width are variable. There is much left to be done.
+Not perfect, but container width, number of columns, gutter width, and several other properties are variable. Still, there is much left to be done, so feel free to pitch in.
 
 I tried to follow [Foundation](http://foundation.zurb.com/)'s structure and keep the generated CSS as close to the original as possible. Compare the Saas generated `ink.css` with the original, `ink-original.css`. Differences include:
 
 * white space
 * significant digits (8.333333% vs 8.33333%)
 * rounding (16.666666% vs 16.66667%)
-* Sass conversion of six-digit hexadecimal colors to color names (#FFFFFF vs white)
+* Sass conversion of six-digit hexadecimal colors to color names (#FFFFFF vs white) and other hexadecimal color annoyances (#555555 vs #555, etc..)
+
+Otherwise, it is the same.
 
 Credit
 ======
@@ -34,7 +36,7 @@ ZURB
 
 Ink was made by [ZURB](http://www.zurb.com), a product design company in Campbell, CA.
 
-Diff
+Diff (from previous commit)
 ====
 diff -w ink-original.css ink.css
 
