@@ -3,16 +3,22 @@ Sassy Ink
 
 A quick and dirty attempt to make a Sass version of [Ink](http://zurb.com/ink). 
 
-Not perfect, but container width, number of columns, gutter width, and several other properties are variable. Still, there is much left to be done, so feel free to pitch in.
+Not perfect, but there are about 80 or so Sass variables provided in the `_settings.scss` file, including container width, number of columns, gutter width, etc... So it is a good start for someone looking for a simple Sass port. Still, there is much left to be done, so feel free to pitch in.
 
 I tried to follow [Foundation](http://foundation.zurb.com/)'s structure and keep the generated CSS as close to the original as possible. Compare the Saas generated `ink.css` with the original, `ink-original.css`. Differences include:
 
 * white space
 * significant digits (8.333333% vs 8.33333%)
 * rounding (16.666666% vs 16.66667%)
-* Sass conversion of six-digit hexadecimal colors to color names (#FFFFFF vs white) and other hexadecimal color annoyances (#555555 vs #555, etc..)
+* Sass conversion of some hexadecimal colors to color names (#FFFFFF vs white) and other hexadecimal color annoyances (#555555 vs #555, etc..) Checkout [hexadecimal-colors](https://github.com/faustgertz/sassy-ink/tree/hexadecimal-colors) branch for one possible solution.
 
 Otherwise, it is the same.
+
+Note: I haven't yet figured out what to do with the docs, Gruntfile.js, bower.json, package.json, etc... 
+
+Testing
+=======
+The only testing I am doing so far is comparing the Saas generated `ink.css` with Zurb's original `ink.css`.
 
 Credit
 ======
@@ -29,17 +35,14 @@ Homepage:      http://zurb.com/ink<br />
 Documentation: http://zurb.com/ink/docs.php<br />
 Download:      http://zurb.com/ink/download.php
 
-Ink is MIT-licensed and absolutely free to use.
+Ink was made by [ZURB](http://www.zurb.com), is MIT-licensed, and absolutely free to use.
 
-ZURB
-====
-
-Ink was made by [ZURB](http://www.zurb.com), a product design company in Campbell, CA.
-
-Diff (from previous commit)
+Diff
 ====
 diff -w ink-original.css ink.css
 
+	22d21
+	<
 	288c287
 	<   width: 8.333333%;
 	---
@@ -72,6 +75,10 @@ diff -w ink-original.css ink.css
 	<   width: 91.666666%;
 	---
 	>   width: 91.66667%;
+	489c488
+	<   font-family: "Helvetica", "Arial", sans-serif;
+	---
+	>   font-family: Helvetica, Arial, sans-serif;
 	622c621
 	<   color: #ffffff;
 	---
@@ -80,6 +87,30 @@ diff -w ink-original.css ink.css
 	<   color: #ffffff;
 	---
 	>   color: white;
+	683c682
+	<   color: #fff !important;
+	---
+	>   color: white !important;
+	709c708
+	<   color: #ffffff !important;
+	---
+	>   color: white !important;
+	715c714
+	<   color: #555;
+	---
+	>   color: #555555;
+	719c718
+	<   color: #555;
+	---
+	>   color: #555555;
+	724c723
+	<   color: #555;
+	---
+	>   color: #555555;
+	730c729
+	<   color: #555 !important;
+	---
+	>   color: #555555 !important;
 	815c814
 	<     width: 8.333333% !important;
 	---
