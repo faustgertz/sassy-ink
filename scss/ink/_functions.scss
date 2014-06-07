@@ -28,52 +28,7 @@ $modules: () !default;
   @return nth($range, 2);
 }
 
-// Borrowed from René Meye's [pull request #61](https://github.com/zurb/ink/pull/61). 
-@function number2word($n) {
-  @if $n == 1 {
-   @return one;
-  } @else if $n == 2 {
-    @return two;
-  } @else if $n == 3 {
-    @return three;
-  } @else if $n == 4 {
-    @return four;
-  } @else if $n == 5 {
-    @return five;
-  } @else if $n == 6 {
-    @return six;
-  } @else if $n == 7 {
-    @return seven;
-  } @else if $n == 8 {
-    @return eight;
-  } @else if $n == 9 {
-    @return nine;
-  } @else if $n == 10 {
-    @return ten;
-  } @else if $n == 11 {
-    @return eleven;
-  } @else if $n == 12 {
-    @return twelve;
-  } @else if $n == 13 {
-    @return thirteen;
-  } @else if $n == 14 {
-    @return fourteen;
-  } @else if $n == 15 {
-    @return fivetine;
-  } @else if $n == 16 {
-    @return sixteen;
-  } @else if $n == 17 {
-    @return seventeen;
-  } @else if $n == 18 {
-    @return eighteen;
-  } @else if $n == 19 {
-    @return nineteen;
-  } @else if $n == 20 {
-    @return twenty;
-  } @else {
-    @return many;
-  }
-}
+
 
 //
 // Grid Functions
@@ -89,4 +44,18 @@ $modules: () !default;
 
 @function grid-calc-px($colNumber, $totalColumns, $conWidth, $colGutter) {
   @return (($conWidth - ($totalColumns - 1) * $colGutter) / $totalColumns * $colNumber + ($colNumber - 1) * $colGutter);
+}
+
+// Limited range from one to a hundred. A more elegent solution is possible in Sass => 3.3
+@function number2word($number) {
+  $words: one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty twenty-one twenty-two twenty-three twenty-four twenty-five twenty-six twenty-seven twenty-eight twenty-nine thirty thirty-one thirty-two thirty-three thirty-four thirty-five thirty-six thirty-seven thirty-eight thirty-nine forty forty-one forty-two forty-three forty-four forty-five forty-six forty-seven forty-eight forty-nine fifty fifty-one fifty-two fifty-three fifty-four fifty-five fifty-six fifty-seven fifty-eight fifty-nine fifty-one fifty-two fifty-three fifty-four fifty-five fifty-six fifty-seven fifty-eight fifty-nine sixty sixty-one sixty-two sixty-three sixty-four sixty-five sixty-six sixty-seven sixty-eight sixty-nine seventy seventy-one seventy-two seventy-three seventy-four seventy-five seventy-six seventy-seven seventy-eight seventy-nine eighty eighty-one eighty-two eighty-three eighty-four eighty-five eighty-six eighty-seven eighty-eight eighty-nine ninety ninety-one ninety-two ninety-three ninety-four ninety-five ninety-six ninety-seven ninety-eight ninety-nine one-hundred;
+  @if type-of($number) != "number" {
+      @warn "number2word(): `#{$number}` is not a number.";
+      @return null;
+    }
+  @if $number < 1 or $number > 100 {
+      @warn "number2word(): `#{$number}` is not between 1 and 100.";
+      @return null;
+    } 
+    @return nth($words, $number);
 }
