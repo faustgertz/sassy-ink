@@ -24,8 +24,8 @@ $panel-border-size: 1px !default;
 		/* Panels */
 
 		.panel {
-		  background: $panel-bg;
-		  border: $panel-border-size $panel-border-style $panel-border-color;
+		  background: color2hex($panel-bg);
+		  border: $panel-border-size $panel-border-style color2hex($panel-border-color);
 		  padding: $panel-padding !important;
 		}
 
