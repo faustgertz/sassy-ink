@@ -100,8 +100,8 @@ $hr-height: 1px !default;
     }
 
     hr {
-      color: $hr-color; 
-      background-color: $hr-color; 
+      color: color2hex($hr-color); 
+      background-color: color2hex($hr-color); 
       height: $hr-height; 
       border: none;
     }
