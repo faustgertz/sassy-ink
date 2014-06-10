@@ -110,8 +110,14 @@ $modules: () !default;
     @return null;
   }
   $six-digit-hexcode: get-six-digit-hexcode($color);
-  $hexcode: optimze-hexcode($six-digit-hexcode);
-  @return $hexcode;
+// Not going to worry about three-character shorthand. Even Zurb 
+// says, in [Responsive Email Gotchas to 
+// Avoid](http://zurb.com/university/library/23), "4. Use six-digit
+// hex codes for colors"
+// 
+// $hexcode: optimze-hexcode($six-digit-hexcode);
+// @return $hexcode;
+  @return $six-digit-hexcode;
 }
 
 @function get-six-digit-hexcode($color) {
