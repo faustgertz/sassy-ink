@@ -16,6 +16,16 @@ Otherwise, it is the same.
 
 Note: I haven't yet figured out what to do with the docs, `Gruntfile.js`, `bower.json`, `package.json`, etc... 
 
+Runtime Dependencies
+=========
+Per the `Gemfile`:
+**compass** <= 1.0.1 & >= 0.12.2
+**sass** <= 3.3.13 & >= 3.2.5
+
+As of this writing, Sassy Ink is still compatible with [Koala](http://koala-app.com/) version 2.0.3 and [CodeKit](https://incident57.com/codekit/) version 2.1.3. It also appears to be compatible with [Scout](http://mhs.github.io/scout-app/) version 0.7.1, even though Scout appears to be using Sass 3.2.1.
+
+It is not necessarily compatible with Sass >= 3.4 because assigning to global variables by default is deprecated. Using "!global" to fix this is incompatible with Sass < 3.3 and would break current versions of Koala, Scout, and probably several other Sass compilers. It would also break things for Compass users who haven't updated since August 18, 2014. Fortunately, the incompatibilty is limited to the `export` mixin, which is used to prevent styles from being loaded multiple times for compenents that rely on other components. Unless doing customization beyond setting variables in `_settings.scss`, this is not likely to be a problem. Yet, it seems worth mentioning.
+
 Precision
 =========
 In order to have the same number of significant digits as in the original Zurb ink.css, you must set the precision to 6. For example:
