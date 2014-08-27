@@ -8,7 +8,7 @@
 // We use this to prevent styles from being loaded multiple times for compenents that rely on other components. 
 $modules: () !default;
 @mixin exports($name) {
-  @if (index($modules, $name) == false) {
+  @if not index($modules, $name) {
     $modules: append($modules, $name);
     @content;
   }
