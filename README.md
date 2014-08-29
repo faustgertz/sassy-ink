@@ -8,8 +8,8 @@ Please let me know if you use Sassy Ink.
 
 1. Zurb's Ink is the leading responsive email framework. Sassy Ink provides 80 or so customizable variables. You can have it your way. 
 1. It makes clients happy. Clients never want framework defaults. Sassy Ink makes it easy to customize container width, number of columns, gutter width, break point, colors, font sizes, font-families, margins, padding, etc... 
-1. Pretty closely follows [Foundation](http://foundation.zurb.com/)'s Sass structure and naming conventions. If you are familar with Foundation (or even Bootstrap), you are familiar with Sassy Ink.
-1. You can easily verify that you are getting all the benefits if Ink because the generated CSS is as close to the Zurb's original `ink.css` as possible. If you don't touch the default variables, the differences are trivial. In fact, the differences are an improvement.
+1. Pretty closely follows [Foundation](http://foundation.zurb.com/)'s Sass structure and naming conventions. If you are familiar with Foundation (or even Bootstrap), you are familiar with Sassy Ink.
+1. You can easily verify that you are getting all the benefits of Ink because the generated CSS is as close to Zurb's original `ink.css` as possible. If you don't touch the default variables, the differences are trivial. In fact, the differences are an improvement.
 
 `diff -bB test/results/target.css  test/results/ink.css`
 
@@ -51,13 +51,13 @@ Per the `Gemfile`:
 
 	**sass** <= 3.3.13 & >= 3.2.5
 
-As of this writing, Sassy Ink is still compatible with [Compass](http://compass-style.org/) versions 0.12.2 through 1.0.1 (as long Sass is between version 3.2.5 and 3.3.13), [Koala](http://koala-app.com/) 2.0.3, and [CodeKit](https://incident57.com/codekit/) 2.1.3. It also appears to be compatible with [Scout](http://mhs.github.io/scout-app/) 0.7.1, even though Scout like like it's using Sass 3.2.1. I haven't tested any others. Please let me know if you do.
+As of this writing, Sassy Ink is still compatible with [Compass](http://compass-style.org/) versions 0.12.2 through 1.0.1 (as long Sass is between version 3.2.5 and 3.3.13), [Koala](http://koala-app.com/) 2.0.3, and [CodeKit](https://incident57.com/codekit/) 2.1.3. It also appears to be compatible with [Scout](http://mhs.github.io/scout-app/) 0.7.1, even though Scout looks like it's using Sass 3.2.1. I haven't tested any others. Please let me know if you do.
 
-It is **not** *necessarily* compatible with Sass >= 3.4 because assigning to global variables by default is deprecated. Using `!global` to fix this is incompatible with Sass < 3.3 and would break current versions of Koala and Scout; most versions of Compass less than 1.0.1 (August 18, 2014); and probably several other Sass compilers. Fortunately, the incompatibilty is limited to the `export` mixin, which is used to prevent styles from being loaded multiple times for compenents that rely on other components. So, unless you are doing customization beyond setting variables in `_settings.scss`, this is not likely to be a problem. Yet, it seems worth mentioning.
+It is **not** *necessarily* compatible with Sass >= 3.4 because assigning to global variables by default is deprecated. Using `!global` to fix this is incompatible with Sass < 3.3 and would break current versions of Koala and Scout; most versions of Compass less than 1.0.1 (August 18, 2014); and probably several other Sass compilers. Fortunately, the incompatibility is limited to the `export` mixin, which is used to prevent styles from being loaded multiple times for components that rely on other components. So, unless you are doing customization beyond setting variables in `_settings.scss`, this is not likely to be a problem. Yet, it seems worth mentioning.
 
 ## Precision
 
-In order to have the same number of significant digits as in the original Zurb ink.css, you must set the precision to 6. For example:
+In order to have the same number of significant digits as in the original Zurb `ink.css`, you must set the precision to 6. For example:
 
 	sass --precision 6 scss/ink.scss css/ink.css
 
@@ -87,10 +87,10 @@ The only testing I am doing so far is comparing the Saas generated `ink.css` wit
 
 ### Massaging
 
-1. Run the CSS file through a Sass compliler to clean up some white space issues. (`sass --precision 6  --style expanded test/fixtures/ink.css test/results/target.css`)
+1. Run the CSS file through a Sass compiler to clean up some white space issues (`sass --precision 6  --style expanded test/fixtures/ink.css test/results/target.css`)
 1. Expand three character hex shorthands (`s/#(\w|\d)(\w|\d)(\w|\d)\b/#$1$1$2$2$3$3/g`)
 1. Remove unnecessary quotes from fonts (`s/(?<=font.*:.*)("|')(\w+)\1.*?;/$2/g`)
-1. Remove an annoying linebreak difference (`s/(table\[class="body"\] td\.offset\-by\-)(\w+)\s*?(,?\s*)(?=\1\w+)/$1$2, /g`)
+1. Remove an annoying line-break difference (`s/(table\[class="body"\] td\.offset\-by\-)(\w+)\s*?(,?\s*)(?=\1\w+)/$1$2, /g`)
 
 ### Diff
 
