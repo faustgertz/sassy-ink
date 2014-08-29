@@ -38,7 +38,11 @@ Please let me know if you use Sassy Ink.
 	---
 	>   color: #555555 !important;
 
-It is a great start for a simple Sass port. There is much left to do, so please feel free to pitch in.
+It is a great start for a simple Sass port. 
+
+## Contributing
+
+There is much left to do, so please feel free to pitch in.
 
 
 ## _settings.scss
@@ -100,7 +104,7 @@ The only testing I am doing so far is comparing the Saas generated `ink.css` wit
 
 ## To Do
 
-* I haven't yet figured out what to do with the docs, `Gruntfile.js`, `bower.json`, etc... 
+* I haven't yet figured out what to do with the docs, `CONTRIBUTING.md`, `Gruntfile.js`, `bower.json`, etc... 
 
 ## Credit
 
