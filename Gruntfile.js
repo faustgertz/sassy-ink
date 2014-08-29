@@ -174,11 +174,11 @@ module.exports = function(grunt) {
     exec: {
       sassTestDiff: {
         command: [
-         'diff -bB --brief test/results/ink.css test/results/target.css',
+         'diff -bB --brief test/results/target.css test/results/ink.css',
           ';',        
-          'diff -bB test/results/ink.css test/results/target.css > test/results/diff.txt',
+          'diff -bB test/results/target.css test/results/ink.css > test/results/diff.txt',
           ';',
-         'diff -bBs test/results/ink.css test/results/target.css',
+         'diff -bBs test/results/target.css test/results/ink.css',
           '&&',
           'rm test/results/diff.txt',
         ].join(''),
@@ -197,9 +197,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('sassy:clean', ['clean:sassCss', 'clean:sassTest']);
   grunt.registerTask('sassy:test:clean', ['clean:sassTest']);
-  grunt.registerTask('sassy:test:target', ['newer:sass:testTarget', 'newer:regex-replace:sassPrepTestTarget']);
+  grunt.registerTask('sassy:test:target', ['newer:sass:testTarget']);
   grunt.registerTask('sassy:test:init', ['sassy:test:clean', 'sassy:test:target']);
-  grunt.registerTask('sassy:test:sass', ['sass:test', 'exec:sassTestDiff']);
+  grunt.registerTask('sassy:test:sass', ['sass:test', 'regex-replace:sassPrepTestTarget', 'exec:sassTestDiff']);
   grunt.registerTask('sassy:test', ['sassy:test:target', 'sassy:test:sass']);
   grunt.registerTask('sassy:test:watch', ['sassy:test', 'watch:sassTest']);
   grunt.registerTask('sassy:make', ['sass:dev']);
