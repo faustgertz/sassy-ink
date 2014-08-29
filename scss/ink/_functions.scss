@@ -42,7 +42,7 @@ $modules: () !default;
 // $colNumber - Found in settings file
 // $totalColumns - Found in settings file
 @function grid-calc-pct($colNumber, $totalColumns) {
-  @return percentage(($colNumber / $totalColumns));
+  @return floor(percentage(($colNumber / $totalColumns)) * 1000000) / 1000000;
 }
 
 @function grid-calc-px($colNumber, $totalColumns, $conWidth, $colGutter) {
