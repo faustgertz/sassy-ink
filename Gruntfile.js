@@ -85,7 +85,7 @@ module.exports = function(grunt) {
           'rm -rf build',
           'echo "Deploy Completed"'
         ].join('&&')
-      }
+      },      
     },
     watch: {
       docs: {
@@ -95,16 +95,122 @@ module.exports = function(grunt) {
           livereload: true,
         },
       },
+      sassTest: {
+        files: ['scss/*.scss', 'scss/ink/*.scss', 'scss/ink/components/*.scss'],
+        tasks: ['sass:test', 'exec:sassTestDiff'],
+      },
+      sassWatch: {
+        files: ['scss/*.scss', 'scss/ink/*.scss', 'scss/ink/components/*.scss'],
+        tasks: ['sass:test', 'copy:sassTest2Dist', 'exec:sassTestDiff'],
+      }      
     },
+
+
+    clean: {
+      sassCss: ["css"],
+      sassTest: ["test/results"],
+    },
+    copy: {
+      sassDeploy: {
+        src: 'scss/**',
+        dest: 'build/downloads/framework/',
+      },
+      sassTest2Dist: {
+        src: 'test/results/ink.css',
+        dest: 'css/ink.css',
+      }, 
+
+    },
+    sass: {
+      options: {
+        style: 'expanded',
+        precision: 6
+      },
+      dist: {
+        files: {
+          'css/ink.css': 'scss/ink.scss'
+        },
+      },
+      dev: {
+        files: {
+          'css/ink.css': 'scss/ink.scss'
+        },
+      },      
+      test: {
+        files: {
+          'test/results/ink.css': 'scss/ink.scss',
+        },
+      },
+      testTarget: {
+        files: {
+          'test/results/target.css': 'test/fixtures/ink.css'
+        },
+      }, 
+    },
+    "regex-replace": {
+      sassPrepTestTarget: {
+        src: ['test/results/target.css'],
+        actions: [
+          {
+            name: 'Expand three character hex shorthands',
+            search: /#(\w|\d)(\w|\d)(\w|\d)\b/g,
+            replace: '#$1$1$2$2$3$3',
+          },
+          {
+            name: 'Remove unnecessary quotes from fonts',
+            search: /font.*:.*("|')\w+\1.*?;/g,
+            replace: function(match) {
+              return match.replace(/("|')(\w+)\1/g, '$2');
+            },
+          },
+          {
+            name: 'Remove annoying linebreak difference',
+            search: /(table\[class="body"\] td\.offset\-by\-)(\w+)\s*?(,?\s*)(?=\1\w+)/g,
+            replace: '$1$2, ',
+          },
+        ],
+      }
+    },
+    exec: {
+      sassTestDiff: {
+        command: [
+         'diff -bB --brief test/results/ink.css test/results/target.css',
+          ';',        
+          'diff -bB test/results/ink.css test/results/target.css > test/results/diff.txt',
+          ';',
+         'diff -bBs test/results/ink.css test/results/target.css',
+          '&&',
+          'rm test/results/diff.txt',
+        ].join(''),
+        exitCode: [0],
+      }, 
+    },    
   });
 
-  grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-shell');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  require('load-grunt-tasks')(grunt, {pattern: ['grunt-*', 'assemble']});
 
   grunt.registerTask('make:templates', ['assemble:templates', 'shell:zipTemplates']);
   grunt.registerTask('deploy:downloads', ['shell:makeStage', 'assemble:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
   grunt.registerTask('make:docs', ['shell:makeStage', 'assemble:docsDev', 'shell:testDocs']);
   grunt.registerTask('deploy:docs', ['shell:makeStage', 'assemble:docsDeploy', 'shell:deployDocs', 'shell:cleanUp']);
-  grunt.registerTask('default', ['make:docs', 'watch']);
+  grunt.registerTask('default', ['make:docs', 'watch:docs']);
+
+  grunt.registerTask('sassy:clean', ['clean:sassCss', 'clean:sassTest']);
+  grunt.registerTask('sassy:test:clean', ['clean:sassTest']);
+  grunt.registerTask('sassy:test:target', ['newer:sass:testTarget', 'newer:regex-replace:sassPrepTestTarget']);
+  grunt.registerTask('sassy:test:init', ['sassy:test:clean', 'sassy:test:target']);
+  grunt.registerTask('sassy:test:sass', ['sass:test', 'exec:sassTestDiff']);
+  grunt.registerTask('sassy:test', ['sassy:test:target', 'sassy:test:sass']);
+  grunt.registerTask('sassy:test:watch', ['sassy:test', 'watch:sassTest']);
+  grunt.registerTask('sassy:make', ['sass:dev']);
+  grunt.registerTask('sassy', ['sassy:clean', 'sassy:test', 'copy:sassTest2Dist', 'watch:sassWatch']);
+
+  grunt.registerTask('sassy:make:templates', ['sass:dist', 'make:templates']);
+  grunt.registerTask('sassy:deploy:downloads', ['shell:makeStage', 'sass:dist', 'copy:sassDeploy', 'assemble:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
+  grunt.registerTask('sassy:make:docs', ['sass:dist', 'make:docs']);
+  grunt.registerTask('sassy:deploy:docs', ['sass:dist', 'deploy:docs']);
+
+
+
+
 };
