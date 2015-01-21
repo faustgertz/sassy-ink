@@ -214,7 +214,7 @@ module.exports = function(grunt) {
   grunt.registerTask('sassy:deploy:downloads', ['shell:makeStage', 'sass:dist', 'copy:sassDeploy', 'assemble:templates', 'shell:zipTemplates', 'shell:zipFramework', 'shell:linkFramework', 'shell:deployDownloads', 'shell:cleanUp']);
   grunt.registerTask('sassy:make:docs', ['sass:dist', 'make:docs']);
   grunt.registerTask('sassy:deploy:docs', ['sass:dist', 'deploy:docs']);
-
+  grunt.registerTask('sassy:default', ['sass:dist', 'default']);
 
 
 
