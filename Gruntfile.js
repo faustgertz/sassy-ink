@@ -168,6 +168,11 @@ module.exports = function(grunt) {
             search: /(table\[class="body"\] td\.offset\-by\-)(\w+)\s*?(,?\s*)(?=\1\w+)/g,
             replace: '$1$2, ',
           },
+          {
+            name: 'Change filename of sourcemap to \'ink\' to pass the diff test',
+            search: /(\/\*# sourceMappingURL=)(\w+)(\.css\.map)/,
+            replace: '$1ink$3',
+          },
         ],
       }
     },
