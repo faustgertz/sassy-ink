@@ -1,52 +1,42 @@
 // halve the text-padding size on mobile
-@media #{$small-only} {
-      table[class="body"] img {
-        width: auto !important;
-        height: auto !important;
-      }
-}
+// @media #{$small-only} {
+//       table[class="text-pad"] img {
+//         width: auto !important;
+//         height: auto !important;
+//       }
+// }
 
 body, .body {
 	background: #F4F5F7;
 }
 
-.section-header {
-	background: #6C7F92;
-}
-.section-header h2 {
-	font-size: 14px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: #FFFFFF;
-}
-
-.section-header h2 {
-	font-size: 14px;
-	font-weight: bold;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: #FFFFFF;
-}
-.row.dive-body {
-	background-color: #FFFFFF;
-}
 .container.section {
 	border: solid 1px #CCCCCC;
 	border-bottom: solid 2px #DDDDDD;
 	border-top: 0;
 	margin-top: 20px;  // Spacing between sections
-}
-.container.section .wrapper {
-	// remove section padding on wrapper (and add it to text-page below)
-	padding-top: 0 !important;
-}
 
-table.columns .text-pad,
-table.columns .left-text-pad,
-table.columns .right-text-pad
-{
-	padding-top: 10px;
-}
+	.wrapper {
+		// remove section padding on wrapper (and add it to text-pad)
+		// can't use it here because the border will include whitespace
+		padding-top: 0 !important;
+	}
 
-//TODO: replace text-pad with section-pad that responds to sizes
+	table.row.section-header {
+		background: #6C7F92;
+		// needed to make correct height on section headers and spacing in body
+		padding-top: 10px !important;
+		h2 {
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			color: #FFFFFF;
+		}
+	}
+	table.row.section-body {
+		background-color: #FFFFFF;
+		padding-top: 20px;
+	}
+
+}
