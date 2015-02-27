@@ -1,0 +1,52 @@
+// halve the text-padding size on mobile
+@media #{$small-only} {
+      table[class="body"] img {
+        width: auto !important;
+        height: auto !important;
+      }
+}
+
+body, .body {
+	background: #F4F5F7;
+}
+
+.section-header {
+	background: #6C7F92;
+}
+.section-header h2 {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.section-header h2 {
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.row.dive-body {
+	background-color: #FFFFFF;
+}
+.container.section {
+	border: solid 1px #CCCCCC;
+	border-bottom: solid 2px #DDDDDD;
+	border-top: 0;
+	margin-top: 20px;  // Spacing between sections
+}
+.container.section .wrapper {
+	// remove section padding on wrapper (and add it to text-page below)
+	padding-top: 0 !important;
+}
+
+table.columns .text-pad,
+table.columns .left-text-pad,
+table.columns .right-text-pad
+{
+	padding-top: 10px;
+}
+
+//TODO: replace text-pad with section-pad that responds to sizes
