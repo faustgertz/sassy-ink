@@ -5,9 +5,9 @@ body, .body {
 .container.section {
 	border: solid 1px #CCCCCC;
 	border-bottom: solid 2px #DDDDDD;
+	// margin: 0 auto 20px auto; // add 20px btwn sections
+	margin-top: 20px;
 	border-top: 0;
-	margin-top: 20px;  // Spacing between sections
-
 	table.row.section-header {
 		h2 {
 			font-size: 14px;
@@ -17,8 +17,8 @@ body, .body {
 		}
 	}
 	table.row.section-body {
-		padding-top: 20px;
-		padding-bottom: 10px;
+		// Apply padding to text-pad (putting it on <table> doesn't work in outlook)
+		.text-pad { padding-top: 20px; }
 	}
 
 	&.editorial {
@@ -39,7 +39,10 @@ body, .body {
 		}
 		.section-body {
 			background-color: #FFFFFF;
-			td { color: #777777; }
+			td { color: #777777 !important; }
+			td a {
+				color: #777777 !important;
+			}
 		}
 	}
 }
