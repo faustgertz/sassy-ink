@@ -1,12 +1,12 @@
 body, .body {
-	background: #EBEEF1;
+	// background: #EBEEF1;
+	background: #F4F5F7
 }
 
 .container.section {
 	border: solid 1px #CCCCCC;
 	border-bottom: solid 2px #DDDDDD;
-	// margin: 0 auto 20px auto; // add 20px btwn sections
-	margin-top: 20px;
+	margin-top: 5px; // add 5px above section -- should already be a <br> there
 	border-top: 0;
 	table.row.section-header {
 		h2 {
@@ -53,7 +53,7 @@ body, .body {
 		}
 		.section-body {
 			td { color: #777777 !important; }
-			td a {
+			td a, td a:visited {
 				color: #777777 !important;
 			}
 		}
@@ -65,7 +65,7 @@ body, .body {
 		}
 		.section-body {
 			td { color: #777777 !important; }
-			td a {
+			td a, td a:visited {
 				color: #777777 !important;
 			}
 		}
