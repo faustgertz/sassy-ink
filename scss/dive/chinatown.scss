@@ -16,18 +16,32 @@ body, .body {
 			text-transform: uppercase;
 		}
 	}
-	table.row.section-body {
-		// Apply padding to text-pad (putting it on <table> doesn't work in outlook)
-		.text-pad { padding-top: 20px; }
+	.section-body {
+		background-color: #FFFFFF;
 	}
+	// table.row.section-body {
+	// 	// Apply padding to text-pad (putting it on <table> doesn't work in outlook)
+	// 	.text-pad { padding-top: 20px; }
+	// }
 
 	&.editorial {
 		.section-header {
 			background-color: #6C7F92;
 			h2 { color: #FFFFFF; }
 		}
-		.section-body {
-			background-color: #FFFFFF;
+		.section-promoted {
+			border-top: solid 2px #DDDDDD;
+			background-color: #EFEFEF;
+			.text-pad {
+				font-size: 12px;
+				color: #999999;
+			}
+			img {
+				display: inline-block;
+				vertical-align: middle;
+				float: none;
+				margin-left: 5px;
+			}
 		}
 	}
 	&.ad {
@@ -38,7 +52,18 @@ body, .body {
 			h2 { color: #333333; }
 		}
 		.section-body {
-			background-color: #FFFFFF;
+			td { color: #777777 !important; }
+			td a {
+				color: #777777 !important;
+			}
+		}
+	}
+	&.edudemic {
+		.section-header {
+			background-color: #37a6d6;
+			h2 { color: #FFFFFF; }
+		}
+		.section-body {
 			td { color: #777777 !important; }
 			td a {
 				color: #777777 !important;
