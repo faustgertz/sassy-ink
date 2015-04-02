@@ -157,3 +157,32 @@ h3 {
 td.expander {
 	font-family: unset;
 }
+
+
+// new ads stuff
+/* Begin new newsletter ads */
+.newsletter-ad {
+	a.cta {
+		color:#52bdf2 !important;
+	}
+	td.sponsor-text {
+		padding-bottom:0;
+	}
+	.sponsor-text h3 {
+		font-weight:bold;
+		font-size:14px;
+	}
+	.sponsor-text span {
+		font-weight:bold;
+		color:#BBBBBB;
+		font-size:12px;
+		display:block;
+	}
+	img {
+		margin-right:10px;
+		display:block;
+		border: solid 1px #CCCCCC;
+		max-width: inherit;
+	}
+}
+/* End new newsletter ads */
