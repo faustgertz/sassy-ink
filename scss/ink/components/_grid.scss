@@ -10,7 +10,7 @@
 $include-html-grid-classes: $include-html-classes !default;
 $include-html-sub-colums-grid-classes: $include-html-grid-classes !default;
 
-$total-columns: 12;
+$total-columns: 12 !default;
 
 $wrapper-padding-top: 10px !default;
 $column-cell-padding-bottom: 10px !default;
