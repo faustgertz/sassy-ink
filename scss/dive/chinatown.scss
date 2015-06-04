@@ -1,66 +1,141 @@
 body, .body {
-	// background: #EBEEF1;
-	background: #F4F5F7
+	background: #FFFFFF;
+	p, h1, h2, h3, h4, h5, h6, li, ol, td {
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		-webkit-hyphens: none;
+		hyphens: none;
+	}
+	p {
+		font-size: 16px;
+
+	}
 }
 
+/* Overriding Zurb */
+a.linked-header, a.linked-header:visited, a.linked-header:active,
+.footer-text a, .footer-text a:visited, .footer-text a:active,
+.manage-subscription a, .manage-subscription a:visited, .manage-subscription a:active {
+    color: #444444 !important;
+    text-decoration: underline;
+}
+
+//Section backgrounds
+.section-stripe {
+	background: #F4F5F7;
+} 
+
+//Pub logo
+.pub-logo {
+	font-size: 16px;
+	font-weight: bold;
+	max-width: 50%;
+}
+
+// Subhead bar
 .subhead-bar {
 	background: #E2E6EA;
 	td { padding: 0 !important; }
-	.wrapper { 
-		padding-top: 4px !important; 
-		padding-bottom: 4px !important;
-	}
-}
-
-// Pub Date in ehader
-.date {
-	color: #777777;
-	letter-spacing: 1px;
-}
-
-.top-links {
-	text-align:right;
-	a, a:visited {
+	.date {
+		color: #777777;
 		letter-spacing: 1px;
-		color: #333333 !important;
-		text-transform: uppercase;
-		font-size: 12px;
 	}
-}
-
-.pub-logo {
-	margin-bottom:10px;
-	max-width: 50%;
-	font-weight: bold;
-	font-size: 16px;
-}
-
-.container.section {
-	border: solid 1px #CCCCCC;
-	border-bottom: solid 2px #DDDDDD;
-	margin-top: 5px; // add 5px above section -- should already be a <br> there
-	border-top: 0;
-	table.row.section-header {
-		h2 {
-			font-size: 14px;
-			font-weight: bold;
+	.top-links {
+		text-align:right;
+		a, a:visited {
+			color: #6c7f92 !important;
+			font-size: 12px;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 		}
 	}
-	.section-body {
-		background-color: #FFFFFF;
-	}
-	// table.row.section-body {
-	// 	// Apply padding to text-pad (putting it on <table> doesn't work in outlook)
-	// 	.text-pad { padding-top: 20px; }
-	// }
+}
 
-	&.editorial {
-		.section-header {
-			background-color: #6C7F92;
-			h2 { color: #FFFFFF; }
+// Main content
+.section .container {
+	.masthead, .section-heading {
+		font-weight: 800;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.masthead {
+		color: #444444;
+		font-size: 38px;
+	}
+	.section-heading {
+		color: #444444;
+		font-size: 22px;
+	}
+	.section-header-divider {
+		text-align: center;
+		background: #D62828;
+		background-color: #D62828;
+		border: solid 1px #D62828;
+		display: block;
+		margin: 12px auto;
+	}
+	.newsletter-item {
+		td {
+			color: #666666;
+			font-size: 16px;
 		}
+		h3 {
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+	.feature-story {
+		td {
+			font-size: 18px;
+			mso-line-height-rule: exactly;
+			line-height: 1.4;
+		}
+		h3 {
+			font-size: 26px;
+			font-weight: bold;
+			mso-line-height-rule: exactly;
+			line-height: 1.3;
+		}
+	}
+	.topics {
+		color: #999999;
+		display: block;
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: .5px;
+		a {
+			font-weight: 400;
+		}
+	}
+	// Story type – e.g. DIVE BRIEF, DIVE FEATURE, etc
+    .story-type {
+    	color: #999999;
+    	font-size: 10px;
+        font-style: italic;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .story-type .sponsor-name {
+        font-weight: normal;
+    }
+    .sponsor-name {
+    	color: #999999;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+	// e.g. Publication Source for "What We're Reading"
+	.subtext {
+		color: #999999;
+		font-size: 12px;
+		
+	}
+	.footer-text {
+		color: #777777;
+		font-size: 12px;
+	}
+	/*
+	&.editorial {
 		.section-promoted {
 			border-top: solid 2px #DDDDDD;
 			background-color: #EFEFEF;
@@ -77,10 +152,7 @@ body, .body {
 		}
 	}
 	&.ad {
-		.section-header {
-			background-color: #F3F5F6;
-			border-top: 1px solid #CCC ;
-			border-bottom: 1px solid #CCC ;
+		.section-heading {
 			h2 { color: #333333; }
 		}
 		.section-body {
@@ -90,98 +162,87 @@ body, .body {
 			}
 		}
 	}
+	*/
 	&.edudemic {
 		.section-header {
 			background-color: #37a6d6;
 			h2 { color: #FFFFFF; }
 		}
-		// .section-body {
-		// 	td { color: #777777 !important; }
-		// 	td a, td a:visited {
-		// 		color: #777777 !important;
-		// 	}
-		// }
 	}
 }
-
-
-h3 {
-	color: #444444;
-	a, a:visited {
-		color: #444444;
-	}
-}
-
-// newsletter item
-.newsletter-item {
-	h3 {
-		font-size: 16px;
-		font-weight: bold;
-	}
-	td {
-		color: #444444;
-		font-size: 16px;
-		padding-bottom: 17px !important; // spacing below newsletter item
-	}
-}
-
-// Feature story
-.feature-story {
-	h3 {
-		font-size: 26px;
-		font-weight: bold;
-		line-height: 1.3;
-	}
-	td {
-		font-size: 18px;
-		line-height: 1.4;
-		color: #444444;
-		padding-bottom: 22px !important; // spacing below feature story
-	}
-}
-
-.subtext {
-	// e.g. Publication Source for "What We're Reading"
-	font-size: 12px;
-	color: #999999;
-}
-
-.footer-text {
-	font-size: 12px;
-	color: #777777;
-}
-
-
 
 // Purely to save space on the inliner. Should have no effect.
 td.expander {
 	font-family: unset;
 }
+    
+/* Material btn */
+.button.material-btn {
+    overflow: visible;
+}
+.button.material-btn td a {
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.button.material-btn.dive td {
+	background: #D62828;
+    border: 1px solid #961c1c;
+    box-shadow: 0 3px 0 #961c1c;
+    -webkit-box-shadow: 0 3px 0 #961c1c;
+    -moz-box-shadow: 0 3px 0 #961c1c;
+    width: 100%;
+}
+html table.button.material-btn.dive td:hover {
+    background: #961c1c !important;
+}
+html table.button.material-btn.gray td {
+    background: #e4e8ec;
+    box-shadow: 0 3px 0 #C6CFD7;
+    -webkit-box-shadow: 0 3px 0 #C6CFD7;
+    -moz-box-shadow: 0 3px 0 #C6CFD7;
+    border: 1px solid #C8CCD0;
+    font-size: 14px;
+}
+html table.button.material-btn.gray td:hover {
+    background: #C6CFD7 !important;
+}
+html table.button.material-btn.gray td a,
+html table.button.material-btn.gray td a:visited,
+html table.button.material-btn.gray td:hover a,
+html table.button.material-btn.gray td:hover a:visited {
+    color: #333333 !important;
+}   
 
-
-// new ads stuff
-/* Begin new newsletter ads */
+// Newsletter ad
 .newsletter-ad {
-	a.cta {
-		color:#52bdf2 !important;
-	}
 	td.sponsor-text {
-		padding-bottom:0;
+		padding-bottom: 0;
+		mso-line-height-rule: exactly;
+		line-height: 1.3;
 	}
-	.sponsor-text h3 {
+	h4 {
+		color: #6c7f92;
+		font-size: 18px;
+		font-weight: bold;
+		mso-line-height-rule: exactly;
+		line-height: 1.2;
+		text-decoration: none;
+	}
+	a.cta-btn {
 		font-weight:bold;
-		font-size:16px;
 	}
 	.sponsor-text span {
-		font-weight:bold;
-		color:#BBBBBB;
-		font-size:12px;
-		display:block;
+		color: #BBBBBB;
+		font-size: 12px;
+		display: block;
+		font-weight: bold;
 	}
 	img {
-		margin-right:10px;
-		display:block;
 		border: solid 1px #CCCCCC;
+		display: block;
+		margin-right: 10px;
 		max-width: inherit;
 	}
 }
