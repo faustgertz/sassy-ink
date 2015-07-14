@@ -37,8 +37,8 @@ $secondary-color: #e9e9e9 !default;
 $alert-color: #c60f13 !default;
 $success-color: #5da423 !default;
 $secondary-border-color: #d0d0d0 !default;
-$alert-border-color: #457a1a !default;
-$success-border-color: #970b0e !default;
+$alert-border-color: #970b0e !default;
+$success-border-color: #457a1a !default;
 
 // We use this to set the default radius used throughout the core.
 $button-radius: $global-radius !default;
@@ -180,20 +180,20 @@ $button-round: $global-rounded !default;
 
     table.success td {
       background: color2hex($success-color);
-      border-color: color2hex($alert-border-color);
+      border-color: color2hex($success-border-color);
     }
 
     table.success:hover td {
-      background: color2hex($alert-border-color) !important;
+      background: color2hex($success-border-color) !important;
     }
 
     table.alert td {
       background: color2hex($alert-color);
-      border-color: color2hex($success-border-color);
+      border-color: color2hex($alert-border-color);
     }
 
     table.alert:hover td {
-      background: color2hex($success-border-color) !important;
+      background: color2hex($alert-border-color) !important;
     }
 
     table.radius td {
