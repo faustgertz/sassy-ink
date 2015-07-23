@@ -17,7 +17,7 @@ $hr-height: 1px !default;
 
 @include exports("normalize") {
     @if $include-html-normalize-classes {
-    /* Client-specific Styles & Reset */
+    /* Client-specific Styles and Reset */
 
     #outlook a { 
       padding:0; 

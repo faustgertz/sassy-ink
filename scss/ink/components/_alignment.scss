@@ -11,7 +11,7 @@ $include-html-alignment-classes: $include-html-classes !default;
 
 @include exports("alignment") {
 	@if $include-html-alignment-classes {
-		/* Alignment & Visibility Classes */
+		/* Alignment and Visibility Classes */
 
 		table.center, td.center {
 		  text-align: center;
