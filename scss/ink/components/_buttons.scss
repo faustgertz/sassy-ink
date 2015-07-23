@@ -11,10 +11,10 @@ $include-html-button-classes: $include-html-classes !default;
 
 // We use these to build padding for buttons.
 $button-dft: 8px 0 !default;
-$button-tny: 5px 0 4px !default;
-$button-sml: 8px 0 7px !default;
-$button-med: 12px 0 10px !default;
-$button-lrg: 21px 0 18px !default;
+$button-tny: 5px 0 !default;
+$button-sml: 8px 0 !default;
+$button-med: 12px 0 !default;
+$button-lrg: 21px 0 !default;
 
 // We use these to control button text styles.
 $button-font-family: $base-font-family !default;
@@ -69,6 +69,7 @@ $button-round: $global-rounded !default;
       border: $button-border-width $button-border-style color2hex($button-border-color);
       color: color2hex($button-font-color);
       padding: $button-dft;
+      line-height: initial !important;
     }
 
     table.tiny-button td {
