@@ -60,7 +60,7 @@ In `Gruntfile.js`:
 
 ## Testing
 
-The only testing I am doing so far is comparing the Saas generated `ink.css` with a slightly massaged Zurb's [`ink.css` version 1.0.5.](https://github.com/zurb/ink/blob/416e0666bfe54a5c9f5dbeaa4c26d29b95b80c0c/css/ink.css) Plase note Zurb's [`ink.css` on GitHub](https://github.com/zurb/ink/blob/master/css/ink.css) does not necessarly match the [version distributed on their website](http://zurb.com/ink/).
+The only testing I am doing so far is comparing the Saas generated `ink.css` with a slightly massaged Zurb's [`ink.css` version 1.0.5.](https://github.com/zurb/ink/blob/416e0666bfe54a5c9f5dbeaa4c26d29b95b80c0c/css/ink.css) Please note Zurb's [`ink.css` on GitHub](https://github.com/zurb/ink/blob/master/css/ink.css) does not necessarly match the [version distributed on their website](http://zurb.com/ink/).
 
 ### Massaging
 
