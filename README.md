@@ -65,8 +65,6 @@ The only testing I am doing so far is comparing the Saas generated `ink.css` wit
 ### Massaging
 
 1. Run the CSS file through a Sass compiler to clean up some white space issues (`sass --precision 6  --style expanded test/fixtures/ink.css test/results/target.css`)
-1. Expand three character hex shorthands (`s/#(\w|\d)(\w|\d)(\w|\d)\b/#$1$1$2$2$3$3/g`)
-1. Remove unnecessary quotes from fonts (`s/(?<=font.*:.*)("|')(\w+)\1.*?;/$2/g`)
 1. Remove an annoying line-break difference (`s/(table\[class="body"\] td\.offset\-by\-)(\w+)\s*?(,?\s*)(?=\1\w+)/$1$2, /g`)
 1. Rename filename for the sourceMappingURL, should one exist, from 'target' to 'ink'. 
 
