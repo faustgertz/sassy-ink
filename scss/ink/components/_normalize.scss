@@ -8,7 +8,7 @@
 // @variables
 //
 $include-html-normalize-classes: $include-html-classes !default;
-$include-hyphens: true !default;
+$include-hyphens: false !default;
 
 // We use these to style the <hr> element
 $hr-color: #d9d9d9 !default;
@@ -92,6 +92,11 @@ $hr-height: 1px !default;
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         hyphens: auto;
+      }
+      else {
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        hyphens: none;        
       }
       border-collapse: collapse !important; 
     }
