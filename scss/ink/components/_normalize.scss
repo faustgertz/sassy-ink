@@ -87,13 +87,13 @@ $hr-height: 1px !default;
     }
 
     td { 
+      word-break: break-word;
       @if $include-hyphens == true {
-        word-break: break-word;
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         hyphens: auto;
       }
-      else {
+      @else {
         -webkit-hyphens: none;
         -moz-hyphens: none;
         hyphens: none;        
