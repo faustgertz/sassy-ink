@@ -29,8 +29,8 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
     @media #{$small-only} {
 
       table[class="body"] img {
-        width: auto !important;
-        height: auto !important;
+        max-width: auto !important;
+        max-height: auto !important;
       }
 
       table[class="body"] center {
