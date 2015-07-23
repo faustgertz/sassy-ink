@@ -104,11 +104,13 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
       table[class="body"] .show-for-desktop {
         display: none !important;
       }
-
+      
       table[class="body"] .show-for-small,
       table[class="body"] .hide-for-desktop {
-        display: inherit !important;
-      }
+        display : block !important;
+        width : auto !important;
+        overflow : visible !important;
+      }      
     }
   }
 }
