@@ -152,18 +152,6 @@ module.exports = function(grunt) {
         src: ['test/results/target.css'],
         actions: [
           {
-            name: 'Expand three character hex shorthands',
-            search: /#(\w|\d)(\w|\d)(\w|\d)\b/g,
-            replace: '#$1$1$2$2$3$3',
-          },
-          {
-            name: 'Remove unnecessary quotes from fonts',
-            search: /font.*:.*("|')\w+\1.*?;/g,
-            replace: function(match) {
-              return match.replace(/("|')(\w+)\1/g, '$2');
-            },
-          },
-          {
             name: 'Remove annoying linebreak difference',
             search: /(table\[class="body"\] td\.offset\-by\-)(\w+)\s*?(,?\s*)(?=\1\w+)/g,
             replace: '$1$2, ',
