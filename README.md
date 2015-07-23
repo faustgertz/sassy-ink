@@ -9,34 +9,7 @@ Please let me know if you use Sassy Ink.
 1. Zurb's Ink is the leading responsive email framework. Sassy Ink provides 80 or so customizable variables. You can have it your way. 
 1. It makes clients happy. Clients never want framework defaults. Sassy Ink makes it easy to customize container width, number of columns, gutter width, break point, colors, font sizes, font-families, margins, padding, etc... 
 1. Pretty closely follows [Foundation](http://foundation.zurb.com/)'s Sass structure and naming conventions. If you are familiar with Foundation (or even Bootstrap), you are familiar with Sassy Ink.
-1. You can easily verify that you are getting all the benefits of Ink because the generated CSS is as close to Zurb's original `ink.css` as possible. If you don't touch the default variables, the differences are trivial. In fact, the differences are an improvement.
-
-`diff -bB test/results/target.css  test/results/ink.css`
-
-	489c488
-	<   font-family: "Helvetica", "Arial", sans-serif;
-	---
-	>   font-family: Helvetica, Arial, sans-serif;
-	683c682
-	<   color: #fff !important;
-	---
-	>   color: #ffffff !important;
-	715c714
-	<   color: #555;
-	---
-	>   color: #555555;
-	719c718
-	<   color: #555;
-	---
-	>   color: #555555;
-	724c723
-	<   color: #555;
-	---
-	>   color: #555555;
-	730c729
-	<   color: #555 !important;
-	---
-	>   color: #555555 !important;
+1. You can easily verify that you are getting all the benefits of Ink because the generated CSS is as close to Zurb's original `ink.css` as possible. If you don't touch the default variables, the differences are trivial.
 
 It is a great start for a simple Sass port. 
 
