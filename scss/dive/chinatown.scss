@@ -5,10 +5,32 @@ body, .body {
 		-ms-hyphens: none;
 		-webkit-hyphens: none;
 		hyphens: none;
+		color: #444
 	}
 	p {
 		font-size: 16px;
-
+	}
+	h1 {
+		font-size:38px;
+	}
+	h2 {
+		font-size:22px;
+	}
+	h3 {
+		line-height:1.3;
+	}
+	h3 {
+		line-height:1.2;
+	}
+	h1, h2 {
+		text-transform: uppercase;
+		font-weight:800;
+		letter-spacing:2px;
+		line-height:1.3;
+	}
+	h3, h4 {
+		font-size:18px;
+		font-weight:bold;
 	}
 }
 
@@ -60,11 +82,13 @@ a.linked-header, a.linked-header:visited, a.linked-header:active,
 		text-align: center;
 	}
 	.masthead {
-		color: #444444;
 		font-size: 38px;
 	}
+	.masthead-subtext {
+		text-align:center;
+		letter-spacing:1px;
+	}
 	.section-heading {
-		color: #444444;
 		font-size: 22px;
 	}
 	.section-header-divider {
