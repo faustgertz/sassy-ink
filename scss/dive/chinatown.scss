@@ -71,9 +71,9 @@ body, .body {
 		text-transform: uppercase;
 	}
 	.masthead {
-		font-size: 34px;
+		font-size: 28px;
 		mso-line-height-rule: exactly;
-		line-height: 1.4;
+		line-height: 1.2;
 	}
 	.masthead-subtext {
 		font-size: 16px;
@@ -104,12 +104,12 @@ body, .body {
 		}
 		&.feature-story {
 			td {
-				font-size: 18px;
+				font-size: 16px;
 				mso-line-height-rule: exactly;
 				line-height: 1.4;
 			}
 			.linked-header, .linked-header:visited, .linked-header:active {
-				font-size: 26px;
+				font-size: 22px;
 				mso-line-height-rule: exactly;
 				line-height: 1.3;
 			}
@@ -303,3 +303,25 @@ html table.button.cta td a:visited {
 	}
 }
 /* End new newsletter ads */
+@media only screen and (min-width: 40.063em) { 
+	.section .container { 
+		.masthead {
+			font-size: 34px;
+			mso-line-height-rule: exactly;
+			line-height: 1.4;
+		}
+		.newsletter-item {
+			.linked-header, .linked-header:visited, .linked-header:active {
+				font-size: 18px;
+			}
+			&.feature-story {
+				td {
+					font-size: 18px;
+				}
+				.linked-header, .linked-header:visited, .linked-header:active {
+					font-size: 26px;
+				}
+			}
+		}
+	}
+} /* min-width 641px, medium screens */
