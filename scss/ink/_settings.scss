@@ -21,12 +21,12 @@
 // $include-html-global-classes: $include-html-classes;
 
 // We use these to control font styles
-$base-font-color: #666666;
-$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// $base-font-weight: normal;
+// $base-font-color: #666666;
+// $base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// // $base-font-weight: normal;
 
-// $body-font-size: 14px;
-$body-line-height: 1.5;
+// // $body-font-size: 14px;
+// $body-line-height: 1.5;
 
 // We use these as default colors throughout
 // $primary-color: #2795b6;
@@ -71,13 +71,13 @@ $body-line-height: 1.5;
 // $include-html-sub-colums-grid-classes: $include-html-grid-classes;
 
 // $container-width: 580px;
-$small-container-width: 98%;
+   $small-container-width: 98%;
 // $total-columns: 12;
 
 // $wrapper-padding-top: 10px;
 // $column-cell-padding-bottom: 10px;
-$text-padding: 20px;
-$small-text-padding: 15px;
+// $text-padding: 20px;
+// $small-text-padding: 15px;
 
 // $sub-column-padding-right: $column-gutter / 2;
 
@@ -132,13 +132,10 @@ $small-text-padding: 15px;
 // $paragraph-lead-line-height: 21px;
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
-$anchor-text-decoration: underline;
-// $anchor-font-color: #2ba6cb;
-$anchor-font-color: #6C7F92;
-// $anchor-font-color-visited: $anchor-font-color;
-// $anchor-font-color-hover: #2795b6;
-$anchor-font-color-hover: #D62828;
+   $anchor-text-decoration: underline;
+   $anchor-font-color: #333333;
+   $anchor-font-color-visited: #8b8b8b;
+   $anchor-font-color-hover: #D62828;
 // $anchor-font-color-active: $anchor-font-color-hover;
 
 // $header-anchor-font-color: $anchor-font-color;
