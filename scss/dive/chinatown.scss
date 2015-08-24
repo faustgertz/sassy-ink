@@ -28,12 +28,12 @@ body, .body {
 	}
 }
 
-//Section backgrounds
+// Section backgrounds
 .section-stripe {
 	background: #f4f5f7;
 } 
 
-//Pub logo
+// Pub logo
 .pub-logo {
 	font-size: 16px;
 	font-weight: bold;
@@ -72,7 +72,6 @@ body, .body {
 	}
 	.masthead {
 		font-size: 28px;
-		mso-line-height-rule: exactly;
 		line-height: 1.2;
 	}
 	.masthead-subtext {
@@ -105,29 +104,14 @@ body, .body {
 		&.feature-story {
 			td {
 				font-size: 16px;
-				mso-line-height-rule: exactly;
 				line-height: 1.4;
 			}
 			.linked-header, .linked-header:visited, .linked-header:active {
 				font-size: 22px;
-				mso-line-height-rule: exactly;
 				line-height: 1.3;
 			}
 		}
 	}
-	/*
-	.topics {
-		color: #999999;
-		display: block;
-		font-size: 12px;
-		font-weight: bold;
-		letter-spacing: .5px;
-		a {
-			font-weight: 400;
-		}
-	}
-	*/
-	// Story type
     .story-type, .sponsor-name {
     	font-size: 12px;
         font-weight: 100;
@@ -158,7 +142,6 @@ body, .body {
     	text-transform: uppercase;
     	vertical-align: top;
     }
-
 	.footer-text {
 		color: #777777;
 		font-size: 12px;
@@ -166,7 +149,9 @@ body, .body {
 	&.edudemic {
 		.section-header {
 			background-color: #37a6d6;
-			h2 { color: #ffffff; }
+			h2 { 
+				color: #ffffff; 
+			}
 		}
 	}
 	.newsletter-item-cta, .newsletter-item-cta:visited, .newsletter-item-cta:active {
@@ -195,7 +180,6 @@ td.expander {
 			font-size:14px; 
 			font-weight: 400; 
 			text-decoration: none; 
-			mso-line-height-rule: exactly;
 			line-height:40px;
 			letter-spacing: 1px;
 		}
@@ -210,49 +194,11 @@ td.expander {
 		}
 	}
 }
-/*
-@media screen and (min-width: 500px) {
-	.button.cta {
-		width: 50%;
-	}	
-}
-*/
-
-
-
-    
-.button.material-btn, .button.cta {
+.button.cta {
     overflow: visible;
-}
-.button.material-btn td a {
-    display: block;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-size: 14px;
-}
-.button.material-btn.dive td {
-	background: #d62828;
-    box-shadow: 0 3px 0 #961c1c;
-    -webkit-box-shadow: 0 3px 0 #961c1c;
-    -moz-box-shadow: 0 3px 0 #961c1c;
-    width: 100%;
 }
 .button.cta td {
 	width: 100%;
-}
-html table.button.material-btn.dive td:hover {
-    background: #961c1c !important;
-}
-html table.button.material-btn.gray td {
-    background: #e4e8ec;
-    box-shadow: 0 3px 0 #c6cfd7;
-    -webkit-box-shadow: 0 3px 0 #c6cfd7;
-    -moz-box-shadow: 0 3px 0 #c6cfd7;
-    border: 1px solid #c8ccd0;
-    font-size: 14px;
-}
-html table.button.material-btn.gray td:hover {
-    background: #c6cfd7 !important;
 }
 html table.button.cta td:hover {
     background: #d62828 !important;
@@ -261,10 +207,6 @@ html table.button.cta td:hover {
 html table.button.cta td:hover a, html table.button.cta td:hover a:visited {
     color: #ffffff;
 }
-html table.button.material-btn.gray td a,
-html table.button.material-btn.gray td a:visited,
-html table.button.material-btn.gray td:hover a,
-html table.button.material-btn.gray td:hover a:visited,
 html table.button.cta td a,
 html table.button.cta td a:visited {
     color: #333333 !important;
@@ -275,7 +217,6 @@ html table.button.cta td a:visited {
 	h4 {
 		color: #6c7f92;
 		font-size: 16px;
-		mso-line-height-rule: exactly;
 		line-height: 1.2;
 		text-decoration: none;
 	}
@@ -287,7 +228,6 @@ html table.button.cta td a:visited {
 	}
 	td.sponsor-text {
 		padding-bottom: 0;
-		mso-line-height-rule: exactly;
 		line-height: 1.3;
 	}
 	a.cta-btn {
@@ -307,7 +247,6 @@ html table.button.cta td a:visited {
 	.section .container { 
 		.masthead {
 			font-size: 34px;
-			mso-line-height-rule: exactly;
 			line-height: 1.4;
 		}
 		.newsletter-item {

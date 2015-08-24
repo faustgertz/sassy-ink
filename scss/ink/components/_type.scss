@@ -36,13 +36,13 @@ $paragraph-lead-line-height: 21px !default;
 // We use these to style anchors
 $anchor-text-decoration: none !default;
 $anchor-font-color: #333333 !default;
-$anchor-font-color-visited: #8b8b8b !default;
-$anchor-font-color-hover: #d62828 !default;
-$anchor-font-color-active: $anchor-font-color !default;
+$anchor-font-color-visited: #333333 !default;
+$anchor-font-color-hover: #333333 !default;
+$anchor-font-color-active: $anchor-font-color-hover !default;
 
 $header-anchor-font-color: $anchor-font-color !default;
-$header-anchor-font-color-visited: #8b8b8b !default;
-$header-anchor-font-color-active: #d62828 !default;
+$header-anchor-font-color-visited: #333333 !default;
+$header-anchor-font-color-active: #333333 !default;
 
 @include exports("type") {
     @if $include-html-type-classes {
