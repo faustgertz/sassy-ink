@@ -186,9 +186,9 @@ td.expander {
 	}
 	&.active {
 		td {
-			background: #d62828;
-			border: solid 1px #d62828;
-			a {
+			background: #d62828 !important;
+			border: solid 1px #d62828 !important;
+			a, a:hover, a:visited, a:active {
 				color: #ffffff !important;
 			}
 		}
@@ -205,7 +205,7 @@ html table.button.cta td:hover {
     border: solid 1px #d62828;
 }
 html table.button.cta td:hover a, html table.button.cta td:hover a:visited {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 html table.button.cta td a,
 html table.button.cta td a:visited {
