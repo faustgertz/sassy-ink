@@ -17,16 +17,21 @@
 /* Unset rules to save on bytes when final email is inlined */
 
 @if $include-html-grid-classes {
-	td.expander {
-		color: unset;
-		font-family: unset;
-		font-weight: unset;
-		hyphens: unset;
-		-moz-hyphens: unset;
-		-webkit-hyphens: unset;
-		line-height: unset;
-		vertical-align: unset;
-		word-break: unset;
-		text-align: unset;
+	html body{
+		td.expander {
+			color: unset;
+			font-family: unset;
+			font-weight: unset;
+			font-size: unset;
+			hyphens: unset;
+			-moz-hyphens: unset;
+			-webkit-hyphens: unset;
+			line-height: unset;
+			mso-line-height-rule: unset;
+			vertical-align: unset;
+			word-break: unset;
+			text-align: unset;
+			letter-spacing: unset;
+		}
 	}
 }
