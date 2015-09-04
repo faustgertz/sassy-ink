@@ -1,0 +1,32 @@
+// This file exists to reduce the file size of Ink-based HTML email messages.
+//
+// We do this by creating rules to "unset" specific properties that don't have
+// any effect on rendering (for example setting a font-family on an element
+// that never contains text). The "unset" value is only supported by some
+// browsers, but the intent is that it will be run through a version of the
+// premailer CSS inliner that is configured to completely remove these
+// attributes when inlining them. This potentially saves a huge amount of space
+// on the final, inlined email HTML.
+//
+// In that sense, these rules are a way to easily "blacklist" properties from
+// being included in CSS inlining while still creating a CSS file that is
+// (mostly) valid CSS before it has been inlined.
+
+@import "global";
+
+/* Unset rules to save on bytes when final email is inlined */
+
+@if $include-html-grid-classes {
+	td.expander {
+		color: unset;
+		font-family: unset;
+		font-weight: unset;
+		hyphens: unset;
+		-moz-hyphens: unset;
+		-webkit-hyphens: unset;
+		line-height: unset;
+		vertical-align: unset;
+		word-break: unset;
+		text-align: unset;
+	}
+}
