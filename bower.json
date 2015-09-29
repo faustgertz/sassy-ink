@@ -1,7 +1,7 @@
 {
-  "name": "ink",
-  "version": "1.0.5",
-  "main": ["./css/ink.css"],
+  "name": "sassy-ink",
+  "version": "1.0.0",
+  "main": ["./scss/ink.scss"],
   "ignore": [
     "**/.*",
     "docs",
