@@ -91,13 +91,12 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default
       }
 
       table[class="body"] .right-text-pad,
-      table[class="body"] .text-pad-right {
-        padding-left: $text-padding !important;
-      }
-
+      table[class="body"] .text-pad-right,
+      table[class="body"] .text-pad,
       table[class="body"] .left-text-pad,
       table[class="body"] .text-pad-left {
-        padding-right: $text-padding !important;
+        padding-right: $small-text-padding !important;
+        padding-left: $small-text-padding !important;
       }
 
       table[class="body"] .hide-for-small,

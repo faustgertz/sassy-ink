@@ -11,7 +11,7 @@ $include-html-normalize-classes: $include-html-classes !default;
 $include-hyphens: false !default;
 
 // We use these to style the <hr> element
-$hr-color: #d9d9d9 !default;
+$hr-color: #d62828 !default;
 $hr-height: 1px !default;
 
 
@@ -61,11 +61,7 @@ $hr-height: 1px !default;
       outline:none; 
       text-decoration:none; 
       -ms-interpolation-mode: bicubic;
-      width: auto;
       max-width: 100%; 
-      float: left; 
-      clear: both; 
-      display: block;
     }
 
     center {

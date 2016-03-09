@@ -1,0 +1,296 @@
+body, .body {
+	.ExternalClass * {line-height: 140%}
+	h1, h2, h3, h4, h5, h6, p, li, td {
+		-moz-hyphens: none;
+		-ms-hyphens: none;
+		-webkit-hyphens: none;
+		hyphens: none;
+		letter-spacing: .4px;
+		mso-line-height-rule: exactly;
+		color: #333333;
+		line-height: 1.6;
+		font-size: 15px;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
+	}
+	h1 {
+		font-size: 38px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	h3, h4 {
+		font-size: 18px;
+		line-height: 1.3;
+	}
+	p, li {
+		font-size: 15px;
+		line-height: 1.6;
+		margin-bottom: 16px;
+	}
+	hr {
+		margin: 0;
+	}
+}
+
+// Section backgrounds
+.section-stripe {
+	background: #f4f5f7;
+} 
+
+// Pub logo
+.pub-logo {
+	height: 36px;
+	width: auto;
+	font-size: 16px;
+	font-weight: bold;
+	float: none;
+	text-align: center;
+}
+
+// Subhead bar
+.header-bar {
+	background: #000;
+	td { 
+		padding: 1px 0 !important; 
+	}
+}
+td.top-links {
+	font-weight: 100;
+	color: #FFFFFF;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	&.right {
+		text-align: right;
+	}
+	a, a:visited {
+		color: #FFFFFF;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			color: #FFFFFF;
+		}
+	}
+}
+
+// Main content
+.section .container {
+	.masthead, .section-heading, .editor-note {
+		font-weight: 800;
+		text-transform: uppercase;
+		
+	}
+	.masthead, .section-heading {
+		letter-spacing: 1px;
+		text-align: center;
+	}
+	.masthead {
+		font-size: 28px;
+		line-height: 1.2;
+	}
+	.masthead-subtext {
+		font-size: 16px;
+		font-weight: 100;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+	.section-heading {
+		font-size: 20px;
+	}
+	.section-header-divider {
+		background-color: #d62828;
+		background: #d62828;
+		border: solid 1px #d62828;
+	}
+	.masthead-header-divider {
+		background-color: #333;
+	}
+	.editor-note {
+		font-size: 18px;
+	}
+	.linked-header, .linked-header:visited, .linked-header:active {
+		text-decoration: none;
+	}
+	.spacer.small td {
+		padding: 3px;
+	}
+	.newsletter-item {
+		td {
+			color: #666666;
+			font-size: 15px;
+		}
+		.zurb-override {
+			padding: 0;
+		}
+		&.feature-story .linked-header {
+			font-size: 22px;
+		}
+		.linked-header {
+			font-size: 18px;
+			line-height: 1.2;
+		}
+
+	}
+    .story-type, .sponsor-name {
+    	font-size: 12px;
+        font-weight: 100;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #aaaaaa;
+        &.feature {
+        	color: #d62828;
+        }
+        &.opinion {
+        	color: #000000;
+        }
+        &.sponsored {
+    		color: #288bd2;
+        }
+    }
+	// e.g. Publication Source for "What We're Reading"
+	.source-publication-logo {
+    	float: left;
+    }
+    .source-publication-website {
+    	color: #999999;
+    	display: inline-block;
+    	font-size: 12px;
+    	font-weight: 200;
+    	margin-left: 10px;
+    	text-transform: uppercase;
+    	vertical-align: top;
+    }
+	.footer-text {
+		color: #777777;
+		font-size: 12px;
+	}
+	&.edudemic {
+		.section-header {
+			background-color: #37a6d6;
+			h2 { 
+				color: #ffffff; 
+			}
+		}
+	}
+	.newsletter-item-cta, .newsletter-item-cta:visited, .newsletter-item-cta:active {
+		display: inline-block;
+	}
+}
+
+// Purely to save space on the inliner. Should have no effect.
+td.expander {
+	font-family: unset;
+}
+
+/* Buttons */
+.button.cta {
+	width: 100%;
+	td {
+		background: none;
+		border: solid 1px #cccccc; 
+		border-radius: 5px; 
+		-webkit-border-radius: 5px; 
+		-moz-border-radius: 5px;
+		padding:0; 
+		text-align:center; 
+		a {
+			display:block;
+			font-size:14px; 
+			font-weight: 400; 
+			text-decoration: none; 
+			line-height:40px;
+			letter-spacing: 1px;
+		}
+	}
+	&.active {
+		td {
+			background: #d62828 !important;
+			border: solid 1px #d62828 !important;
+			a, a:hover, a:visited, a:active {
+				color: #ffffff !important;
+			}
+		}
+	}
+}
+.button.cta {
+    overflow: visible;
+}
+.button.cta td {
+	width: 100%;
+}
+html table.button.cta td:hover {
+    background: #d62828 !important;
+    border: solid 1px #d62828;
+}
+html table.button.cta td:hover a, html table.button.cta td:hover a:visited {
+    color: #ffffff !important;
+}
+html table.button.cta td a,
+html table.button.cta td a:visited {
+    color: #333333 !important;
+}   
+
+// ESNA section
+.esna-section {
+	h2 {
+		color: #0585CF;
+	}
+}
+.section-header-divider.esna-divider {
+	background: #0585CF;
+	border: solid 1px #0585CF;
+}
+.esna-cta {
+	color: #0585CF;
+}
+
+// Newsletter ad
+.newsletter-ad {
+	h4 {
+		font-size: 16px;
+		line-height: 1.2;
+		text-decoration: none;
+	}
+	img {
+		border: solid 1px #cccccc;
+		display: block;
+		margin-right: 10px;
+		max-width: inherit;
+	}
+	.sponsor {
+		color: #999;
+	}
+	.sponsor-text {
+		font-size: 14px;
+		padding-bottom: 0;
+		line-height: 1.3;
+	}
+	a.cta-btn {
+		font-weight: bold;
+		white-space: nowrap;
+		color: #D62828;
+	}
+}
+/* End new newsletter ads */
+@media only screen and (max-width: 40.063em) { 
+	.pub-logo {
+		max-width: 70%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+@media only screen and (min-width: 40.063em) { 
+	.section .container { 
+		.masthead {
+			font-size: 34px;
+			line-height: 1.4;
+		}
+		.newsletter-item {
+			&.feature-story .linked-header {
+				font-size: 28px;
+			}
+		}
+	}
+} /* min-width 641px, medium screens */
