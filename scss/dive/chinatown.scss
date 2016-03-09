@@ -1,5 +1,4 @@
 body, .body {
-	background: #FFFFFF;
 	.ExternalClass * {line-height: 140%}
 	h1, h2, h3, h4, h5, h6, p, li, td {
 		-moz-hyphens: none;
@@ -8,8 +7,9 @@ body, .body {
 		hyphens: none;
 		letter-spacing: .4px;
 		mso-line-height-rule: exactly;
-		line-height: 1.6;
 		color: #333333;
+		line-height: 1.6;
+		font-size: 15px;
 	}
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: bold;
@@ -22,9 +22,15 @@ body, .body {
 	}
 	h3, h4 {
 		font-size: 18px;
+		line-height: 1.3;
 	}
 	p, li {
-		font-size: 14px;
+		font-size: 15px;
+		line-height: 1.6;
+		margin-bottom: 16px;
+	}
+	hr {
+		margin: 0;
 	}
 }
 
@@ -37,38 +43,47 @@ body, .body {
 .pub-logo {
 	font-size: 16px;
 	font-weight: bold;
-	max-width: 50%;
+	max-width: 100%;
+	float: none;
+	text-align: center;
 }
 
 // Subhead bar
-.subhead-bar {
-	background: #e2e6ea;
+.header-bar {
+	background: #000;
 	td { 
-		padding: 0 !important; 
+		padding: 1px 0 !important; 
 	}
-	.date {
-		color: #777777;
-		font-weight: 100;
-		letter-spacing: 1px;
-	}
-	.top-links {
+}
+td.top-links {
+	font-weight: 100;
+	color: #FFFFFF;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	&.right {
 		text-align: right;
-		a, a:visited {
-			color: #6c7f92;
-			font-size: 12px;
-			letter-spacing: 1px;
-			text-transform: uppercase;
+	}
+	a, a:visited {
+		color: #FFFFFF;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			color: #FFFFFF;
 		}
 	}
 }
 
 // Main content
 .section .container {
-	.masthead, .section-heading {
+	.masthead, .section-heading, .editor-note {
 		font-weight: 800;
+		text-transform: uppercase;
+		
+	}
+	.masthead, .section-heading {
 		letter-spacing: 1px;
 		text-align: center;
-		text-transform: uppercase;
 	}
 	.masthead {
 		font-size: 28px;
@@ -81,36 +96,41 @@ body, .body {
 		letter-spacing: 1px;
 	}
 	.section-heading {
-		font-size: 22px;
+		font-size: 20px;
 	}
 	.section-header-divider {
+		background-color: #d62828;
 		background: #d62828;
 		border: solid 1px #d62828;
-		display: block;
-		margin: 12px auto;
-		text-align: center;
+	}
+	.masthead-header-divider {
+		background-color: #333;
+	}
+	.editor-note {
+		font-size: 18px;
 	}
 	.linked-header, .linked-header:visited, .linked-header:active {
 		text-decoration: none;
 	}
+	.spacer.small td {
+		padding: 3px;
+	}
 	.newsletter-item {
 		td {
 			color: #666666;
-			font-size: 14px;
+			font-size: 15px;
 		}
-		.linked-header, .linked-header:visited, .linked-header:active {
+		.zurb-override {
+			padding: 0;
+		}
+		&.feature-story .linked-header {
+			font-size: 22px;
+		}
+		.linked-header {
 			font-size: 18px;
+			line-height: 1.2;
 		}
-		&.feature-story {
-			td {
-				font-size: 16px;
-				line-height: 1.4;
-			}
-			.linked-header, .linked-header:visited, .linked-header:active {
-				font-size: 22px;
-				line-height: 1.3;
-			}
-		}
+
 	}
     .story-type, .sponsor-name {
     	font-size: 12px;
@@ -130,8 +150,7 @@ body, .body {
     }
 	// e.g. Publication Source for "What We're Reading"
 	.source-publication-logo {
-    	margin: 10px 10px 10px 0;
-    	display: inline-block;
+    	float: left;
     }
     .source-publication-website {
     	color: #999999;
@@ -229,7 +248,6 @@ html table.button.cta td a:visited {
 // Newsletter ad
 .newsletter-ad {
 	h4 {
-		color: #6c7f92;
 		font-size: 16px;
 		line-height: 1.2;
 		text-decoration: none;
@@ -240,23 +258,28 @@ html table.button.cta td a:visited {
 		margin-right: 10px;
 		max-width: inherit;
 	}
-	td.sponsor-text {
+	.sponsor {
+		color: #999;
+	}
+	.sponsor-text {
+		font-size: 14px;
 		padding-bottom: 0;
 		line-height: 1.3;
 	}
 	a.cta-btn {
-		display: block;
 		font-weight: bold;
 		white-space: nowrap;
-	}
-	.sponsor-text span {
-		color: #bbbbbb;
-		font-size: 12px;
-		display: block;
-		font-weight: bold;
+		color: #D62828;
 	}
 }
 /* End new newsletter ads */
+@media only screen and (max-width: 40.063em) { 
+	.pub-logo {
+		max-width: 70%;
+		display: block;
+		margin: 0 auto;
+	}
+}
 @media only screen and (min-width: 40.063em) { 
 	.section .container { 
 		.masthead {
@@ -264,16 +287,8 @@ html table.button.cta td a:visited {
 			line-height: 1.4;
 		}
 		.newsletter-item {
-			.linked-header, .linked-header:visited, .linked-header:active {
-				font-size: 18px;
-			}
-			&.feature-story {
-				td {
-					font-size: 18px;
-				}
-				.linked-header, .linked-header:visited, .linked-header:active {
-					font-size: 26px;
-				}
+			&.feature-story .linked-header {
+				font-size: 28px;
 			}
 		}
 	}
