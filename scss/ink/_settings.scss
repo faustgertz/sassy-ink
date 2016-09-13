@@ -74,7 +74,7 @@
 // $include-html-sub-colums-grid-classes: $include-html-grid-classes;
 
 // $container-width: 580px;
-// $small-container-width: 95%;
+   $small-container-width: 98%;
 // $total-columns: 12;
 
 // $wrapper-padding-top: 10px;
@@ -134,10 +134,10 @@
 // $paragraph-lead-line-height: 21px;
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
-// $anchor-font-color: #2ba6cb;
-// $anchor-font-color-visited: $anchor-font-color;
-// $anchor-font-color-hover: #2795b6;
+   $anchor-text-decoration: underline;
+   $anchor-font-color: #333333;
+   $anchor-font-color-visited: #333333;
+   $anchor-font-color-hover: #333333;
 // $anchor-font-color-active: $anchor-font-color-hover;
 
 // $header-anchor-font-color: $anchor-font-color;
@@ -145,7 +145,7 @@
 // $header-anchor-font-color-active: $header-anchor-font-color;
 
 // We use these to style the <hr> element
-// $hr-color: #d9d9d9;
+   $hr-color: #dedede;
 // $hr-height: 1px;
 
 
